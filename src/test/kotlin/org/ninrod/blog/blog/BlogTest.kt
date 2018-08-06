@@ -7,11 +7,11 @@ import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.test.context.junit.jupiter.SpringExtension
 
 // pq isso não funciona?
-//@ExtendWith(SpringExtension::class)
+@ExtendWith(SpringExtension::class)
 @SpringBootTest
 class MyTest {
     @Test
     fun mytest() {
-        Assertions.assertEquals(4, 2 * 2)
+        Assertions.assertEquals(3, 2 * 2)
     }
 }
