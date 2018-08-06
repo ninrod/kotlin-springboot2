@@ -1,15 +1,11 @@
 buildscript {
-    ext {
-        kotlinVersion="$kotlin_version"
-        springBootVersion="$springboot_version"
-    }
     repositories {
         mavenCentral()
     }
     dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}")
-        classpath("org.jetbrains.kotlin:kotlin-allopen:${kotlinVersion}")
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springboot_version}")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlin_version}")
+        classpath("org.jetbrains.kotlin:kotlin-allopen:${kotlin_version}")
     }
 }
 
@@ -42,15 +38,17 @@ repositories {
 dependencies {
     compile('org.springframework.boot:spring-boot-starter-data-jpa')
     compile('org.springframework.boot:spring-boot-starter-web')
-    compile('com.fasterxml.jackson.module:jackson-module-kotlin')
     compile("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+
+    compile('com.fasterxml.jackson.module:jackson-module-kotlin')
 
     // pq o reflect não é mostrado nas deps do gradle?
     compile("org.jetbrains.kotlin:kotlin-reflect")
     runtime('com.h2database:h2')
+
     testCompile('org.springframework.boot:spring-boot-starter-test') {
         exclude module: 'junit'
     }
-    testImplementation('org.junit.jupiter:junit-jupiter-api')
+    testCompile('org.junit.jupiter:junit-jupiter-api')
     testRuntimeOnly('org.junit.jupiter:junit-jupiter-engine')
 }
