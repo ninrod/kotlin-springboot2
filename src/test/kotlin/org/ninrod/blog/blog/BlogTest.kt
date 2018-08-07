@@ -7,11 +7,11 @@ import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.test.context.junit.jupiter.SpringExtension
 
 
-@ExtendWith(SpringExtension::class)// error in intellij. runs ok on gradle
+@ExtendWith(SpringExtension::class)
 @SpringBootTest
 class MyTest {
     @Test
     fun mytest() {
-        Assertions.assertEquals(3, 2 * 2)
+        Assertions.assertEquals(4, 2 * 2)
     }
 }
