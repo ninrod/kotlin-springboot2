@@ -6,8 +6,8 @@ import org.junit.jupiter.api.extension.ExtendWith
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.test.context.junit.jupiter.SpringExtension
 
-// pq isso não funciona?
-@ExtendWith(SpringExtension::class)
+
+@ExtendWith(SpringExtension::class)// error in intellij. runs ok on gradle
 @SpringBootTest
 class MyTest {
     @Test
