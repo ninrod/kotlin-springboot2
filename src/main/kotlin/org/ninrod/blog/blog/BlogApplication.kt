@@ -1,5 +1,6 @@
 package org.ninrod.blog.blog
 
+import org.slf4j.LoggerFactory
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 import org.springframework.web.bind.annotation.GetMapping
@@ -16,8 +17,11 @@ data class Greeting(val id: Long, val content: String)
 
 @RestController
 class GreetingController {
+    private val log = LoggerFactory.getLogger(BlogApplication::class.java)
     val counter = AtomicLong()
     @GetMapping("/")
-    fun greeting(@RequestParam(value = "name", defaultValue = "World") name: String) =
-            Greeting(counter.incrementAndGet(), "Hello, $name")
+    fun greeting(@RequestParam(value = "name", defaultValue = "World") name: String): Greeting {
+        log.info("$name was passed to the url. counter = $counter.")
+        return Greeting(counter.incrementAndGet(), "Hello, $name")
+    }
 }
