@@ -1,0 +1,9 @@
+version: '3'
+services:
+  server:
+    image: openjdk:10.0.2-13-jdk
+    volumes:
+      - ./build/libs:/opt/assets/
+    ports:
+      - "8080:8080"
+    command: java -jar /opt/assets/blog-0.0.1-SNAPSHOT.jar
