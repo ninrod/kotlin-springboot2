@@ -1,9 +1,16 @@
 version: '3'
 services:
-  server:
-    image: openjdk:10.0.2-13-jdk
-    volumes:
-      - ./build/libs:/opt/assets/
+  # server:
+  #   image: openjdk:10.0.2-13-jdk
+  #   volumes:
+  #     - ./build/libs:/opt/assets/
+  #   ports:
+  #     - "8080:8080"
+  #   command: java -jar /opt/assets/blog-0.0.1-SNAPSHOT.jar
+  db:
+    image: postgres:10.5
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: example
     ports:
-      - "8080:8080"
-    command: java -jar /opt/assets/blog-0.0.1-SNAPSHOT.jar
+      - 5432:5432
