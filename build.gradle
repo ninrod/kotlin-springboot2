@@ -6,11 +6,13 @@ buildscript {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springboot_version}")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlin_version}")
         classpath("org.jetbrains.kotlin:kotlin-allopen:${kotlin_version}")
+        classpath("org.jetbrains.kotlin:kotlin-noarg:$kotlin_version")
     }
 }
 
 apply plugin: 'kotlin'
 apply plugin: 'kotlin-spring'
+apply plugin: "kotlin-jpa"
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
