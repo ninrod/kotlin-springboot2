@@ -1,4 +1,4 @@
-package org.ninrod.blog.blog
+package org.ninrod.blog
 
 import org.slf4j.LoggerFactory
 import org.springframework.boot.autoconfigure.SpringBootApplication

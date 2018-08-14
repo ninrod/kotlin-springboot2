@@ -1,4 +1,4 @@
-package org.ninrod.blog.blog
+package org.ninrod.blog
 
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
@@ -9,9 +9,9 @@ import org.springframework.test.context.junit.jupiter.SpringExtension
 
 @ExtendWith(SpringExtension::class)
 @SpringBootTest
-class MyTest {
+class SimpleTest {
     @Test
-    fun mytest() {
+    fun simpleTest() {
         Assertions.assertEquals(4, 2 * 2)
     }
 }
