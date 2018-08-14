@@ -2,13 +2,15 @@
 
 * kotlin rest service sporting springboot2
 
-# build
+## build
 
     gradle build
 
-# run
+## run
 
     make
+    
+* then open your brower on http://localhost:8080
 
 ## LICENSE
 
