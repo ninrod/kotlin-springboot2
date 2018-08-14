@@ -4,10 +4,10 @@
 
 ## stack
 
-* reverse proxy: nginx
+* reverse proxy: dockerized nginx
 * frontend: angular7
-* backend: kotlin with springboot2 running on openjdk
-* db: postgresql
+* backend: dockerized kotlin uberjar with springboot2 running on openjdk
+* db: dockerized postgresql
 * tests: junit5 and mockito
 * logging: logback
 
