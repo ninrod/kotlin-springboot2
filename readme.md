@@ -9,6 +9,7 @@
 * kotlin
 * frontend: angular7 talking to the rest api
 * reverse proxy: nginx
+* db: postgresql
 
 ## build
 
