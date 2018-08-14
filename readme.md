@@ -1,6 +1,9 @@
 # kotlin-springboot2
 
 * the idea is to assemble a working stack using kotlin/springboot2 as a rest api server talking to a postgresql db using the latest and greatest of java frameworks. 
+
+## stack
+
 * junit5 and mockito 
 * springboot2
 * kotlin
