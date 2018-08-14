@@ -4,12 +4,11 @@
 
 ## stack
 
-* junit5 and mockito 
-* springboot2
-* kotlin
-* frontend: angular7 talking to the rest api
 * reverse proxy: nginx
+* frontend: angular7
+* backend: kotlin with springboot2 running on openjdk
 * db: postgresql
+* tests: junit5 and mockito
 
 ## build
 
