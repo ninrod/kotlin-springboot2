@@ -1,6 +1,6 @@
 # kotlin-springboot2
 
-* the idea is to assemble a working stack using kotlin/springboot2 as a rest api server talking to a postgresql db using the latest and greatest of java frameworks. 
+* the idea is to assemble a full working stack using kotlin/springboot2 as a rest api server talking to a postgresql db using the latest and greatest comming from the java framework land. We'll use angular7 for the frontend served by nginx, our reverse proxy of choice. 
 
 ## stack
 
