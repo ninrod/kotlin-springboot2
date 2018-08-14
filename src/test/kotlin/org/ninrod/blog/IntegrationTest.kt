@@ -12,7 +12,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension
 
 @ExtendWith(SpringExtension::class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-class IntegrationTests(@Autowired val restTemplate: TestRestTemplate) {
+class IntegrationTest(@Autowired val restTemplate: TestRestTemplate) {
     @Test
     fun `Assert blog page title, content and status code`() {
         val s ="my_friend_stay_a_while_and_listen"
