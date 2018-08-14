@@ -11,30 +11,22 @@ import org.springframework.test.context.junit.jupiter.SpringExtension
 @ExtendWith(SpringExtension::class)
 @DataJpaTest
 class RepositoriesTests(@Autowired val entityManager: TestEntityManager,
-                        @Autowired val userRepository: UserRepository,
-                        @Autowired val articleRepository: ArticleRepository) {
+                        @Autowired val userRepository: UserRepository) {
 
   @Test
-  fun `When findById then return Article`() {
-    val juergen = User("springjuergen", "Juergen", "Hoeller")
+  fun `findall test`() {
+    val juergen = Usuario("springjuergen", "Juergen", "Hoeller")
     entityManager.persist(juergen)
-    val article = Article("Spring Framework 5.0 goes GA", "Dear Spring community ...", "Lorem ipsum", juergen)
-    entityManager.persist(article)
-    entityManager.flush()
-
-    val found = articleRepository.findById(article.id!!)
-
-    assertThat(found.get()).isEqualTo(article)
+    val found = userRepository.findAll()
+    assertThat(found.count()).isEqualTo(1)
   }
 
   @Test
   fun `When findById then return User`() {
-    val juergen = User("springjuergen", "Juergen", "Hoeller")
+    val juergen = Usuario("springjuergen", "Juergen", "Hoeller")
     entityManager.persist(juergen)
     entityManager.flush()
-
     val found = userRepository.findById(juergen.login)
-
     assertThat(found.get()).isEqualTo(juergen)
   }
 

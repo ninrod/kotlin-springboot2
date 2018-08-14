@@ -47,7 +47,7 @@ dependencies {
     compile("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     compile('com.fasterxml.jackson.module:jackson-module-kotlin')
     compile("org.jetbrains.kotlin:kotlin-reflect")
-    runtime('com.h2database:h2')
+    compile("org.postgresql:postgresql:9.4-1206-jdbc42")
     testCompile('org.springframework.boot:spring-boot-starter-test') {
         exclude module: 'junit'
     }
