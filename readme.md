@@ -9,6 +9,7 @@
 * backend: kotlin with springboot2 running on openjdk
 * db: postgresql
 * tests: junit5 and mockito
+* logging: logback
 
 ## build
 
