@@ -1,7 +1,12 @@
-version: '3'
+version: '3.5'
+networks:
+  internal-net:
+   name: kotlin_server_subnet
 services:
   server:
     image: openjdk:8-jre
+    networks:
+      - internal-net
     volumes:
       - ./build/libs:/opt/assets/
     ports:
@@ -14,3 +19,5 @@ services:
       POSTGRES_PASSWORD: example
     ports:
       - 5432:5432
+    networks:
+      - internal-net
