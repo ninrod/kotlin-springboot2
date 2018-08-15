@@ -6,7 +6,7 @@
 
 * reverse proxy: dockerized nginx
 * frontend: angular7
-* backend: dockerized kotlin uberjar with springboot2 running on openjdk
+* backend: dockerized kotlin uberjar with springboot2 running on openjdk-8
 * db: dockerized postgresql
 * tests: junit5 and mockito
 * logging: logback
