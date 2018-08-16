@@ -9,7 +9,7 @@ import javax.annotation.PostConstruct
 @SpringBootApplication
 class BlogApplication {
     companion object {
-        val logger: Logger? = LoggerFactory.getLogger(BlogApplication.javaClass)
+        val logger: Logger? = LoggerFactory.getLogger(BlogApplication::class.java)
     }
     @PostConstruct
     fun postConstruct() {
