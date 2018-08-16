@@ -2,7 +2,7 @@
 <configuration>
     <include resource="org/springframework/boot/logging/logback/base.xml"/>
     <!--<appender-ref ref="CONSOLE"/>-->
-    <logger name="org.ninrod" level="WARN" additivity="false"/>
-    <logger name="org.hibernate" level="WARN" additivity="false"/>
-    <logger name="org.springframework" level="WARN" additivity="false"/>
+    <logger name="org.ninrod" level="info"/>
+    <logger name="org.hibernate" level="warn"/>
+    <logger name="org.springframework" level="warn"/>
 </configuration>
