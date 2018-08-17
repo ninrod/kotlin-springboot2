@@ -9,27 +9,26 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager
 import org.springframework.test.context.junit.jupiter.SpringExtension
 
-@ExtendWith(SpringExtension::class)
 @DataJpaTest
-@AutoConfigureTestDatabase(replace=AutoConfigureTestDatabase.Replace.NONE)
+@ExtendWith(SpringExtension::class)
+@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 class RepositoriesTests(@Autowired val entityManager: TestEntityManager,
                         @Autowired val userRepository: UserRepository) {
 
-  @Test
-  fun `findall test`() {
-    val juergen = Usuario("springjuergen", "Juergen", "Hoeller")
-    entityManager.persist(juergen)
-    val found = userRepository.findAll()
-    assertThat(found.count()).isEqualTo(1)
-  }
+    @Test
+    fun `findall test`() {
+        val juergen = Usuario("springjuergen", "Juergen", "Hoeller")
+        entityManager.persist(juergen)
+        val found = userRepository.findAll()
+        assertThat(found.count()).isEqualTo(1)
+    }
 
-  @Test
-  fun `When findById then return User`() {
-    val juergen = Usuario("springjuergen", "Juergen", "Hoeller")
-    entityManager.persist(juergen)
-    entityManager.flush()
-    val found = userRepository.findById(juergen.login)
-    assertThat(found.get()).isEqualTo(juergen)
-  }
-
+    @Test
+    fun `When findById then return User`() {
+        val juergen = Usuario("springjuergen", "Juergen", "Hoeller")
+        entityManager.persist(juergen)
+        entityManager.flush()
+        val found = userRepository.findById(juergen.login)
+        assertThat(found.get()).isEqualTo(juergen)
+    }
 }
