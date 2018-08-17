@@ -17,6 +17,11 @@ We'll use angular7 for the frontend served by nginx, our reverse proxy of choice
 
 ** building
 #+BEGIN_SRC shell
+
+# if you don't have a running postgresql container, spin up one:
+$ make db
+
+# now just build the project
 $ gradle build
 #+END_SRC
 ** running
