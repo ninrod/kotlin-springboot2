@@ -3,7 +3,6 @@ package org.ninrod.blog
 import org.junit.jupiter.api.Test
 
 import org.junit.jupiter.api.extension.ExtendWith
-import org.mockito.Mockito
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest
 import org.springframework.boot.test.context.TestConfiguration
@@ -14,29 +13,38 @@ import org.springframework.test.web.servlet.MockMvc
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers.*
 import org.hamcrest.Matchers.`is`
+import org.mockito.Mockito.`when`
+import org.mockito.Mockito.mock
 
 @ExtendWith(SpringExtension::class)
 @WebMvcTest(GreetingController::class)
-class ControllerTests(@Autowired val mvc: MockMvc) {
+class ControllerTests(@Autowired val mvc: MockMvc,
+                      @Autowired val service: PhraseService,
+                      @Autowired val repo: UserRepository) {
     @Test
     fun `should return hello world`() {
+        val phrase = "Hello, "
+        `when`(service.phrase()).thenReturn(phrase)
         mvc.perform(get("/").contentType(MediaType.APPLICATION_JSON))
 				.andExpect(status().isOk)
                 .andExpect(jsonPath("$.id", `is`(1)))
-                .andExpect(jsonPath("$.content", `is`("Hello, World")))
+                .andExpect(jsonPath("$.content", `is`("${phrase}World")))
     }
 
     @Test
     fun `should return hello, ninrod`() {
+        val phrase = "Olá, "
+        `when`(service.phrase()).thenReturn(phrase)
+
         val exp = "NiNRoD"
         mvc.perform(get("/?name=$exp").contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk)
-                .andExpect(jsonPath("$.content", `is`("Hello, $exp")))
+                .andExpect(jsonPath("$.content", `is`("$phrase$exp")))
     }
 
     @TestConfiguration
     class Config {
-        @Bean
-        fun repo(): UserRepository = Mockito.mock(UserRepository::class.java)
+        @Bean fun repo(): UserRepository = mock(UserRepository::class.java)
+        @Bean fun service(): PhraseService = mock(PhraseService::class.java)
     }
 }

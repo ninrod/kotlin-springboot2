@@ -9,14 +9,16 @@ import java.util.concurrent.atomic.AtomicLong
 
 data class Greeting(val id: Long, val content: String)
 @RestController
-class GreetingController(@Autowired val userRepo: UserRepository) {
+class GreetingController(@Autowired val userRepo: UserRepository,
+                         @Autowired val service: PhraseService) {
     private val log = LoggerFactory.getLogger(BlogApplication::class.java)
     val counter = AtomicLong()
 
     @GetMapping("/")
     fun greeting(@RequestParam(value = "name", defaultValue = "World") name: String): Greeting {
         log.info("$name was passed to the url. counter = $counter.")
-        return Greeting(counter.incrementAndGet(), "Hello, $name")
+        val phrase = service.phrase()
+        return Greeting(counter.incrementAndGet(), "$phrase$name")
     }
 
     @GetMapping("/persist")
