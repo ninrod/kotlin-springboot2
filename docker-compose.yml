@@ -5,7 +5,7 @@ networks:
 services:
   server:
     image: openjdk:8-jre
-    container_name: server
+    container_name: backend
     networks:
       - internal-net
     volumes:
