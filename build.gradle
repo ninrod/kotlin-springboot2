@@ -1,8 +1,7 @@
 buildscript {
-    repositories {
-        mavenCentral()
-    }
+    repositories { maven { url "${artifactory_gradle}"}}
     dependencies {
+        classpath "org.jfrog.buildinfo:build-info-extractor-gradle:4+"
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springboot_version}")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlin_version}")
         classpath("org.jetbrains.kotlin:kotlin-allopen:${kotlin_version}")
@@ -33,9 +32,7 @@ compileTestKotlin {
     }
 }
 
-repositories {
-    mavenCentral()
-}
+repositories { maven { url "${artifactory_gradle}" } }
 
 test {
   useJUnitPlatform()
@@ -55,5 +52,3 @@ dependencies {
     //testRuntimeOnly('com.h2database:h2:1.3.148')
     testRuntimeOnly('org.junit.jupiter:junit-jupiter-engine')
 }
-
-
