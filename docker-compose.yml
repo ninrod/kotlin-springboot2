@@ -1,7 +1,7 @@
 version: '3.6'
 networks:
   internal-net:
-   name: kotlin_server_subnet
+   name: workbench_subnet
 services:
   server:
     image: openjdk:8-jre
@@ -21,5 +21,19 @@ services:
       POSTGRES_PASSWORD: example
     ports:
       - "5432:5432"
+    networks:
+      - internal-net
+  proxy:
+    image: nginx:latest
+    container_name: proxy
+    ports:
+      - "8123:80"
+      - "443:443"
+    volumes:
+      - ./frontend/target/dist/:/usr/share/nginx/html/:ro
+      - ./nginx/conf/nginx.conf:/etc/nginx/nginx.conf:ro
+    environment:
+      - NGINX_HOST=ninrod.org
+      - NGINX_PORT=80
     networks:
       - internal-net
