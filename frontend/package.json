@@ -1,13 +1,14 @@
 {
   "name": "frontend",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "start": "ng serve --host 0.0.0.0 --proxy-config proxy.conf.json  --poll",
+    "json-server": "cp initial-json-server.db.json json-server.db.json && node json-server.js",
+    "build": "ng build --prod --aot",
+    "test": "ng test --source-map=false --watch",
+    "lint": "ng lint"
   },
   "private": true,
   "dependencies": {
@@ -43,6 +44,7 @@
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
-    "typescript": "~3.1.6"
+    "typescript": "~3.1.6",
+    "json-server": "0.12.1"
   }
 }
