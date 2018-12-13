@@ -1,5 +1,5 @@
 up:
-	docker-compose up -d && docker logs backend -f
+	docker-compose up -d
 
 db:
 	docker-compose up -d db
