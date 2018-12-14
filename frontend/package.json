@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --host 0.0.0.0 --proxy-config proxy-intelilj.conf.json --poll",
+    "start": "ng serve --host 0.0.0.0 --proxy-config proxy-intellij.conf.json --poll",
     "stub": "run-p json-server serve-stub",
     "serve-stub": "ng serve --host 0.0.0.0 --proxy-config proxy.conf.json --poll",
     "json-server": "cp initial-json-server.db.json json-server.db.json && node json-server.js",
