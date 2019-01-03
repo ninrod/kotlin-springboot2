@@ -27,8 +27,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -43,19 +43,12 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": true,
-              "extractCss": true,
+              "extractCss": false,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": true,
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
-                }
-              ]
+              "buildOptimizer": true
             }
           }
         },
