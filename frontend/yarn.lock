@@ -10,6 +10,14 @@
     "@angular-devkit/core" "7.1.3"
     rxjs "6.3.3"
 
+"@angular-devkit/architect@0.11.4":
+  version "0.11.4"
+  resolved "http://artifactory/artifactory/api/npm/npm/@angular-devkit/architect/-/architect-0.11.4.tgz#f0cc3b4f1dd0128f6b41d3bb760bcf4c324cd063"
+  integrity sha1-8Mw7Tx3QEo9rQdO7dgvPTDJM0GM=
+  dependencies:
+    "@angular-devkit/core" "7.1.4"
+    rxjs "6.3.3"
+
 "@angular-devkit/build-angular@~0.11.0":
   version "0.11.3"
   resolved "http://artifactory/artifactory/api/npm/npm/@angular-devkit/build-angular/-/build-angular-0.11.3.tgz#77fca86b9c9df4b4b0e0e4ae0d9aa2eddd5d0d05"
@@ -94,47 +102,58 @@
     rxjs "6.3.3"
     source-map "0.7.3"
 
-"@angular-devkit/schematics@7.1.3":
-  version "7.1.3"
-  resolved "http://artifactory/artifactory/api/npm/npm/@angular-devkit/schematics/-/schematics-7.1.3.tgz#30d03fde5bb27d6606d9a6e055188382408670d6"
-  integrity sha1-MNA/3luyfWYG2abgVRiDgkCGcNY=
+"@angular-devkit/core@7.1.4":
+  version "7.1.4"
+  resolved "http://artifactory/artifactory/api/npm/npm/@angular-devkit/core/-/core-7.1.4.tgz#4d903fd2ecc259b716ae76da19695d03993e583c"
+  integrity sha1-TZA/0uzCWbcWrnbaGWldA5k+WDw=
   dependencies:
-    "@angular-devkit/core" "7.1.3"
+    ajv "6.5.3"
+    chokidar "2.0.4"
+    fast-json-stable-stringify "2.0.0"
+    rxjs "6.3.3"
+    source-map "0.7.3"
+
+"@angular-devkit/schematics@7.1.4":
+  version "7.1.4"
+  resolved "http://artifactory/artifactory/api/npm/npm/@angular-devkit/schematics/-/schematics-7.1.4.tgz#d2828fb86b5453395fab12a36779d0fd9fbdadc2"
+  integrity sha1-0oKPuGtUUzlfqxKjZ3nQ/Z+9rcI=
+  dependencies:
+    "@angular-devkit/core" "7.1.4"
     rxjs "6.3.3"
 
-"@angular/animations@~7.1.0":
-  version "7.1.3"
-  resolved "http://artifactory/artifactory/api/npm/npm/@angular/animations/-/animations-7.1.3.tgz#365c782efd7aa962cf9ce3a014d915e7e2720aab"
-  integrity sha1-Nlx4Lv16qWLPnOOgFNkV5+JyCqs=
+"@angular/animations@~7.1.4":
+  version "7.1.4"
+  resolved "http://artifactory/artifactory/api/npm/npm/@angular/animations/-/animations-7.1.4.tgz#6c1ca6b8449bb0fa874343371961fccbe19791bc"
+  integrity sha1-bBymuESbsPqHQ0M3GWH8y+GXkbw=
   dependencies:
     tslib "^1.9.0"
 
-"@angular/cli@~7.1.3":
-  version "7.1.3"
-  resolved "http://artifactory/artifactory/api/npm/npm/@angular/cli/-/cli-7.1.3.tgz#591bdd104084b6f74819c4ddabc28d1cc1e35d84"
-  integrity sha1-WRvdEECEtvdIGcTdq8KNHMHjXYQ=
+"@angular/cli@~7.1.4":
+  version "7.1.4"
+  resolved "http://artifactory/artifactory/api/npm/npm/@angular/cli/-/cli-7.1.4.tgz#f07ee4e979ec202bf2fd91a665e3d2d6c065bbe1"
+  integrity sha1-8H7k6XnsICvy/ZGmZePS1sBlu+E=
   dependencies:
-    "@angular-devkit/architect" "0.11.3"
-    "@angular-devkit/core" "7.1.3"
-    "@angular-devkit/schematics" "7.1.3"
-    "@schematics/angular" "7.1.3"
-    "@schematics/update" "0.11.3"
+    "@angular-devkit/architect" "0.11.4"
+    "@angular-devkit/core" "7.1.4"
+    "@angular-devkit/schematics" "7.1.4"
+    "@schematics/angular" "7.1.4"
+    "@schematics/update" "0.11.4"
     inquirer "6.2.0"
     opn "5.3.0"
     semver "5.5.1"
     symbol-observable "1.2.0"
 
-"@angular/common@~7.1.0":
-  version "7.1.3"
-  resolved "http://artifactory/artifactory/api/npm/npm/@angular/common/-/common-7.1.3.tgz#13f171fe3802318cab2128a48e5aca922adb30e9"
-  integrity sha1-E/Fx/jgCMYyrISikjlrKkirbMOk=
+"@angular/common@~7.1.4":
+  version "7.1.4"
+  resolved "http://artifactory/artifactory/api/npm/npm/@angular/common/-/common-7.1.4.tgz#a89f43e87317dee80b7664225442aaeca6c83547"
+  integrity sha1-qJ9D6HMX3ugLdmQiVEKq7KbINUc=
   dependencies:
     tslib "^1.9.0"
 
-"@angular/compiler-cli@~7.1.0":
-  version "7.1.3"
-  resolved "http://artifactory/artifactory/api/npm/npm/@angular/compiler-cli/-/compiler-cli-7.1.3.tgz#47cf718c4cc91f9f9cbcf845cb83b004db1a91db"
-  integrity sha1-R89xjEzJH5+cvPhFy4OwBNsakds=
+"@angular/compiler-cli@~7.1.4":
+  version "7.1.4"
+  resolved "http://artifactory/artifactory/api/npm/npm/@angular/compiler-cli/-/compiler-cli-7.1.4.tgz#2a65ed98a189fb066d7e3dc6d98eff0918b3ff62"
+  integrity sha1-KmXtmKGJ+wZtfj3G2Y7/CRiz/2I=
   dependencies:
     canonical-path "1.0.0"
     chokidar "^1.4.2"
@@ -148,50 +167,50 @@
     tslib "^1.9.0"
     yargs "9.0.1"
 
-"@angular/compiler@~7.1.0":
-  version "7.1.3"
-  resolved "http://artifactory/artifactory/api/npm/npm/@angular/compiler/-/compiler-7.1.3.tgz#4ac14c217812e3e7eb4df5d53b8b11612561ac50"
-  integrity sha1-SsFMIXgS4+frTfXVO4sRYSVhrFA=
+"@angular/compiler@~7.1.4":
+  version "7.1.4"
+  resolved "http://artifactory/artifactory/api/npm/npm/@angular/compiler/-/compiler-7.1.4.tgz#fc0f8ddd2d1b6e1a4aafab2af7949bbd05bc527c"
+  integrity sha1-/A+N3S0bbhpKr6sq95SbvQW8Unw=
   dependencies:
     tslib "^1.9.0"
 
-"@angular/core@~7.1.0":
-  version "7.1.3"
-  resolved "http://artifactory/artifactory/api/npm/npm/@angular/core/-/core-7.1.3.tgz#759f626d734a90552936604d7adda5ac885a6887"
-  integrity sha1-dZ9ibXNKkFUpNmBNet2lrIhaaIc=
+"@angular/core@~7.1.4":
+  version "7.1.4"
+  resolved "http://artifactory/artifactory/api/npm/npm/@angular/core/-/core-7.1.4.tgz#ad899985290957bbb9ac5c47c62ae5a72ccf5d00"
+  integrity sha1-rYmZhSkJV7u5rFxHxirlpyzPXQA=
   dependencies:
     tslib "^1.9.0"
 
-"@angular/forms@~7.1.0":
-  version "7.1.3"
-  resolved "http://artifactory/artifactory/api/npm/npm/@angular/forms/-/forms-7.1.3.tgz#8ff73944ef4bde5ccf34800b0e3993b15f43b8d2"
-  integrity sha1-j/c5RO9L3lzPNIALDjmTsV9DuNI=
+"@angular/forms@~7.1.4":
+  version "7.1.4"
+  resolved "http://artifactory/artifactory/api/npm/npm/@angular/forms/-/forms-7.1.4.tgz#f3491264c27968d8da017fdc5b1178c46f4a4b83"
+  integrity sha1-80kSZMJ5aNjaAX/cWxF4xG9KS4M=
   dependencies:
     tslib "^1.9.0"
 
-"@angular/language-service@~7.1.0":
-  version "7.1.3"
-  resolved "http://artifactory/artifactory/api/npm/npm/@angular/language-service/-/language-service-7.1.3.tgz#7388097137a6cc3acc234d6d409b78028a2c1b9b"
-  integrity sha1-c4gJcTemzDrMI01tQJt4AoosG5s=
+"@angular/language-service@~7.1.4":
+  version "7.1.4"
+  resolved "http://artifactory/artifactory/api/npm/npm/@angular/language-service/-/language-service-7.1.4.tgz#59303e719937f774d9266a5e5f498ba254e0fe7b"
+  integrity sha1-WTA+cZk393TZJmpeX0mLolTg/ns=
 
-"@angular/platform-browser-dynamic@~7.1.0":
-  version "7.1.3"
-  resolved "http://artifactory/artifactory/api/npm/npm/@angular/platform-browser-dynamic/-/platform-browser-dynamic-7.1.3.tgz#d8ac0338e80602aaf4ee5c110a68d8d30f58e6e6"
-  integrity sha1-2KwDOOgGAqr07lwRCmjY0w9Y5uY=
+"@angular/platform-browser-dynamic@~7.1.4":
+  version "7.1.4"
+  resolved "http://artifactory/artifactory/api/npm/npm/@angular/platform-browser-dynamic/-/platform-browser-dynamic-7.1.4.tgz#e76a5a267caf27d17bf46d16f009cd9c68a8dfd3"
+  integrity sha1-52paJnyvJ9F79G0W8AnNnGio39M=
   dependencies:
     tslib "^1.9.0"
 
-"@angular/platform-browser@~7.1.0":
-  version "7.1.3"
-  resolved "http://artifactory/artifactory/api/npm/npm/@angular/platform-browser/-/platform-browser-7.1.3.tgz#8f4929dd5907dd721d4c28b8baf49c7a366542c0"
-  integrity sha1-j0kp3VkH3XIdTCi4uvScejZlQsA=
+"@angular/platform-browser@~7.1.4":
+  version "7.1.4"
+  resolved "http://artifactory/artifactory/api/npm/npm/@angular/platform-browser/-/platform-browser-7.1.4.tgz#1d6cbaedb565d8b92fb0e227b2f4a599dd5ec217"
+  integrity sha1-HWy67bVl2LkvsOInsvSlmd1ewhc=
   dependencies:
     tslib "^1.9.0"
 
-"@angular/router@~7.1.0":
-  version "7.1.3"
-  resolved "http://artifactory/artifactory/api/npm/npm/@angular/router/-/router-7.1.3.tgz#766bef2a29d03c9b4900a31ba954efa64afb8e72"
-  integrity sha1-dmvvKinQPJtJAKMbqVTvpkr7jnI=
+"@angular/router@~7.1.4":
+  version "7.1.4"
+  resolved "http://artifactory/artifactory/api/npm/npm/@angular/router/-/router-7.1.4.tgz#b618a7b3d474bc443b5f8269e04b093a9619800d"
+  integrity sha1-thins9R0vEQ7X4Jp4EsJOpYZgA0=
   dependencies:
     tslib "^1.9.0"
 
@@ -283,38 +302,38 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@fortawesome/angular-fontawesome@0.1.1":
-  version "0.1.1"
-  resolved "http://artifactory/artifactory/api/npm/npm/@fortawesome/angular-fontawesome/-/angular-fontawesome-0.1.1.tgz#18270a06553b93f357cd0a54cabe5fa1cf633ca5"
-  integrity sha1-GCcKBlU7k/NXzQpUyr5foc9jPKU=
+"@fortawesome/angular-fontawesome@0.3.0":
+  version "0.3.0"
+  resolved "http://artifactory/artifactory/api/npm/npm/@fortawesome/angular-fontawesome/-/angular-fontawesome-0.3.0.tgz#380492f186469ce03d6fdbb3ec719810f771bf62"
+  integrity sha1-OASS8YZGnOA9b9uz7HGYEPdxv2I=
   dependencies:
     tslib "^1.9.0"
 
-"@fortawesome/fontawesome-common-types@^0.2.2":
-  version "0.2.10"
-  resolved "http://artifactory/artifactory/api/npm/npm/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.2.10.tgz#ae0e6858daf6f9ff1e2396f9fbea87b244628343"
-  integrity sha1-rg5oWNr2+f8eI5b5++qHskRig0M=
+"@fortawesome/fontawesome-common-types@^0.2.12":
+  version "0.2.12"
+  resolved "http://artifactory/artifactory/api/npm/npm/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.2.12.tgz#42baa71f97ca06faeb0b6718fa5ed20c5eefdf07"
+  integrity sha1-QrqnH5fKBvrrC2cY+l7SDF7v3wc=
 
-"@fortawesome/fontawesome-svg-core@1.2.2":
-  version "1.2.2"
-  resolved "http://artifactory/artifactory/api/npm/npm/@fortawesome/fontawesome-svg-core/-/fontawesome-svg-core-1.2.2.tgz#b431e7efb3e3a1887e596daa6ed0d241d2d1aea5"
-  integrity sha1-tDHn77PjoYh+WW2qbtDSQdLRrqU=
+"@fortawesome/fontawesome-svg-core@1.2.12":
+  version "1.2.12"
+  resolved "http://artifactory/artifactory/api/npm/npm/@fortawesome/fontawesome-svg-core/-/fontawesome-svg-core-1.2.12.tgz#9732617b1e484435f6946645d7f9ad248f12c437"
+  integrity sha1-lzJhex5IRDX2lGZF1/mtJI8SxDc=
   dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.2.2"
+    "@fortawesome/fontawesome-common-types" "^0.2.12"
 
-"@fortawesome/free-regular-svg-icons@5.2.0":
-  version "5.2.0"
-  resolved "http://artifactory/artifactory/api/npm/npm/@fortawesome/free-regular-svg-icons/-/free-regular-svg-icons-5.2.0.tgz#6e96f19e349ac0d19b6758255c777f7331aeb40c"
-  integrity sha1-bpbxnjSawNGbZ1glXHd/czGutAw=
+"@fortawesome/free-regular-svg-icons@5.6.3":
+  version "5.6.3"
+  resolved "http://artifactory/artifactory/api/npm/npm/@fortawesome/free-regular-svg-icons/-/free-regular-svg-icons-5.6.3.tgz#b0a44d665c347b56d064a37962e81e8d8a8f2624"
+  integrity sha1-sKRNZlw0e1bQZKN5YugejYqPJiQ=
   dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.2.2"
+    "@fortawesome/fontawesome-common-types" "^0.2.12"
 
-"@fortawesome/free-solid-svg-icons@5.2.0":
-  version "5.2.0"
-  resolved "http://artifactory/artifactory/api/npm/npm/@fortawesome/free-solid-svg-icons/-/free-solid-svg-icons-5.2.0.tgz#b51c1d49278ef538a97c0ce9575a1b54cc1a52dc"
-  integrity sha1-tRwdSSeO9TipfAzpV1obVMwaUtw=
+"@fortawesome/free-solid-svg-icons@5.6.3":
+  version "5.6.3"
+  resolved "http://artifactory/artifactory/api/npm/npm/@fortawesome/free-solid-svg-icons/-/free-solid-svg-icons-5.6.3.tgz#1d7f6669ccd6a1ea673699e41f7e32c81401a260"
+  integrity sha1-HX9maczWoepnNpnkH34yyBQBomA=
   dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.2.2"
+    "@fortawesome/fontawesome-common-types" "^0.2.12"
 
 "@ngtools/webpack@7.1.3":
   version "7.1.3"
@@ -327,22 +346,22 @@
     tree-kill "1.2.0"
     webpack-sources "1.2.0"
 
-"@schematics/angular@7.1.3":
-  version "7.1.3"
-  resolved "http://artifactory/artifactory/api/npm/npm/@schematics/angular/-/angular-7.1.3.tgz#2cdbc6471358cf429fbea7ab192edc7246c87bd5"
-  integrity sha1-LNvGRxNYz0KfvqerGS7cckbIe9U=
+"@schematics/angular@7.1.4":
+  version "7.1.4"
+  resolved "http://artifactory/artifactory/api/npm/npm/@schematics/angular/-/angular-7.1.4.tgz#cec4a5b793e54bd624018b6b5b4b917c467d22a5"
+  integrity sha1-zsSlt5PlS9YkAYtrW0uRfEZ9IqU=
   dependencies:
-    "@angular-devkit/core" "7.1.3"
-    "@angular-devkit/schematics" "7.1.3"
+    "@angular-devkit/core" "7.1.4"
+    "@angular-devkit/schematics" "7.1.4"
     typescript "3.1.6"
 
-"@schematics/update@0.11.3":
-  version "0.11.3"
-  resolved "http://artifactory/artifactory/api/npm/npm/@schematics/update/-/update-0.11.3.tgz#ffbe8d2d839773df171972193e0d8765eb2bcdc7"
-  integrity sha1-/76NLYOXc98XGXIZPg2HZesrzcc=
+"@schematics/update@0.11.4":
+  version "0.11.4"
+  resolved "http://artifactory/artifactory/api/npm/npm/@schematics/update/-/update-0.11.4.tgz#47407cff57dba8ffc6826e1328fefd526fab2721"
+  integrity sha1-R0B8/1fbqP/Ggm4TKP79Um+rJyE=
   dependencies:
-    "@angular-devkit/core" "7.1.3"
-    "@angular-devkit/schematics" "7.1.3"
+    "@angular-devkit/core" "7.1.4"
+    "@angular-devkit/schematics" "7.1.4"
     "@yarnpkg/lockfile" "1.1.0"
     ini "1.3.5"
     pacote "9.1.1"
