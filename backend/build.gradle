@@ -54,3 +54,15 @@ dependencies {
     //testRuntimeOnly("com.h2database:h2:1.3.148")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
 }
+
+task verify {
+    doLast {
+        def path = '/etc/centos-release'
+        def file = new File(path)
+        def e = file.exists()
+        if (e)
+            println "o path ${path} existe! estamos no CentOS!"
+        else
+            println "infelizmente o ${path} não existe. Não estamos no amado CentOS"
+    }
+}
