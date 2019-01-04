@@ -1,6 +1,10 @@
 buildscript {
+  apply from: "$rootDir/functions.gradle"
   repositories {
-    maven { url "${artifactory_gradle}"}
+        if (doWeHaveToUseArtifactory())
+            maven { url "${artifactory_gradle}"}
+        else
+            mavenCentral()
   }
   dependencies {
       classpath "org.jfrog.buildinfo:build-info-extractor-gradle:4+"
@@ -10,6 +14,7 @@ buildscript {
       classpath("org.jetbrains.kotlin:kotlin-noarg:$kotlin_version")
   }
 }
+apply from: "$rootDir/functions.gradle"
 
 apply plugin: "kotlin"
 apply plugin: "kotlin-spring"
@@ -55,14 +60,9 @@ dependencies {
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
 }
 
-def doWeHaveToUseArtifactory = { ->
-    def centos = new File('/etc/centos-release').exists()
-    def workbench = new File('/etc/hostname').getText('UTF-8').trim() == "workbench"
-    return centos && workbench
-}
-
 task verify {
     doLast {
+        println rootDir
         if (doWeHaveToUseArtifactory())
             println "estamos no workbench rodando CentOS, precisamos apontar para o artifactory"
         else
