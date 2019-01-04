@@ -29,7 +29,7 @@ class GreetingController(
     fun persist() {
         val juergen = Usuario("springjuergen", "Juergen", "Hoeller")
         log.info("trying to persist ${juergen.firstname}")
-        userRepo.save(juergen);
+        userRepo.save(juergen)
         log.info("${juergen.firstname} was persisted")
     }
 

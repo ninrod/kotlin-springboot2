@@ -20,7 +20,8 @@ import org.mockito.Mockito.mock
 @WebMvcTest(GreetingController::class)
 class ControllerTests(@Autowired val mvc: MockMvc,
                       @Autowired val service: PhraseService,
-                      @Autowired val repo: UserRepository) {
+                      @Autowired val userService: UserService
+                      ) {
     @Test
     fun `should return hello world`() {
         val phrase = "Hello, "
@@ -42,9 +43,21 @@ class ControllerTests(@Autowired val mvc: MockMvc,
                 .andExpect(jsonPath("$.content", `is`("$phrase$exp")))
     }
 
+    @Test
+    fun `should return second`() {
+        val couves: String = "das couves"
+        val users: List<Usuario> = listOf(Usuario("1", "first", "jose", couves))
+        `when`(userService.getUsers()).thenReturn(users)
+
+        mvc.perform(get("/users").contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk)
+                .andExpect(jsonPath("$[0].description", `is`(couves)))
+    }
+
     @TestConfiguration
     class Config {
         @Bean fun repo(): UserRepository = mock(UserRepository::class.java)
         @Bean fun service(): PhraseService = mock(PhraseService::class.java)
+        @Bean fun userService(): UserService = mock(UserService::class.java)
     }
 }

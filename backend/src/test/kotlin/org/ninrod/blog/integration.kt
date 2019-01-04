@@ -1,6 +1,6 @@
 package org.ninrod.blog
 
-import org.assertj.core.api.Assertions.*
+import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
 import org.springframework.beans.factory.annotation.Autowired
@@ -25,6 +25,6 @@ class IntegrationTest(@Autowired val restTemplate: TestRestTemplate) {
     fun `Assert users are retrieved`() {
         val e = restTemplate.getForEntity<String>("/users")
         assertThat(e.statusCode).isEqualTo(HttpStatus.OK)
-        assertThat(e.body).contains("blah")
+        assertThat(e.body).contains("second")
     }
 }
