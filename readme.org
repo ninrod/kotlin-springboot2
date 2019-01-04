@@ -21,13 +21,17 @@ We'll use angular7 for the frontend served by nginx, our reverse proxy of choice
 # if you don't have a running postgresql container, spin up one:
 $ make db
 
-# now just build the project
-$ gradle build
+# first, build the backend
+$ cd backend && gradle build
+
+# now build the frontend
+$ cd frontend && yarn && yarn build
+
 #+END_SRC
 ** running
 #+BEGIN_SRC shell
 $ make
-# then open your brower on http://localhost:8080
+# then open your brower on http://localhost:4200
 #+END_SRC
 
 * LICENSE
