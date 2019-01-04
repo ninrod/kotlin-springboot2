@@ -3,7 +3,7 @@ buildscript {
     maven { url "${artifactory_gradle}"}
   }
   dependencies {
-    classpath "org.jfrog.buildinfo:build-info-extractor-gradle:4+"
+      classpath "org.jfrog.buildinfo:build-info-extractor-gradle:4+"
       classpath("org.springframework.boot:spring-boot-gradle-plugin:${springboot_version}")
       classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlin_version}")
       classpath("org.jetbrains.kotlin:kotlin-allopen:${kotlin_version}")
