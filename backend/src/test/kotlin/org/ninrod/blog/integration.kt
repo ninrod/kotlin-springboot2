@@ -20,4 +20,11 @@ class IntegrationTest(@Autowired val restTemplate: TestRestTemplate) {
         assertThat(entity.statusCode).isEqualTo(HttpStatus.OK)
         assertThat(entity.body).contains("Hello, $s")
     }
+
+    @Test
+    fun `Assert users are retrieved`() {
+        val e = restTemplate.getForEntity<String>("/users")
+        assertThat(e.statusCode).isEqualTo(HttpStatus.OK)
+        assertThat(e.body).contains("blah")
+    }
 }
