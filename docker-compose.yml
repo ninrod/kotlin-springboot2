@@ -12,7 +12,7 @@ services:
       - ./backend/build/libs:/opt/assets/
     command: java -jar /opt/assets/blog-0.0.1-SNAPSHOT.jar
   db:
-    image: postgres:10.5
+    image: postgres:11.1
     container_name: db
     restart: always
     volumes:
