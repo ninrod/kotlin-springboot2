@@ -8,7 +8,7 @@ buildscript {
     apply from: "$rootDir/configs.gradle"
     repositories {
         if (doWeHaveToUseArtifactory())
-            maven { url "${configs.artifactory}"}
+            maven { url(configs.artifactory) }
         else
             mavenCentral()
     }
@@ -32,6 +32,7 @@ apply plugin: "io.spring.dependency-management"
 group = "org.ninrod.blog"
 version = "0.0.1-SNAPSHOT"
 sourceCompatibility = 1.8
+
 compileKotlin {
     kotlinOptions {
         freeCompilerArgs = ["-Xjsr305=strict"]
@@ -47,7 +48,7 @@ compileTestKotlin {
 
 repositories {
     if (doWeHaveToUseArtifactory())
-        maven { url "${configs.artifactory}"}
+        maven { url(configs.artifactory) }
     else
         mavenCentral()
 }
