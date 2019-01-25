@@ -1,0 +1,4 @@
+def configs = new Expando()
+ext.configs = configs
+
+configs.artifactory = 'http://artifactory/artifactory/gradle'

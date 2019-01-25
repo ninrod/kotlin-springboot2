@@ -1,0 +1,21 @@
+// setup ----------------------------------------
+def versions = new Expando()
+def deps = new Expando()
+ext.versions = versions
+ext.deps = deps
+
+// versions ----------------------------------------
+versions.springboot = '2.1.1.RELEASE'
+versions.jfrog = '4.9.0'
+versions.kotlin = '1.3.20'
+
+// dependencies ----------------------------------------
+deps.jfrog = "org.jfrog.buildinfo:build-info-extractor-gradle:${versions.jfrog}"
+deps.springboot = [
+    gradle : "org.springframework.boot:spring-boot-gradle-plugin:${versions.springboot}"
+]
+deps.kotlin = [
+    gradle  : "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin}",
+    allopen :"org.jetbrains.kotlin:kotlin-allopen:${versions.kotlin}",
+    noarg   : "org.jetbrains.kotlin:kotlin-noarg:${versions.kotlin}"
+]
