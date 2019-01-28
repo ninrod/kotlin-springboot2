@@ -13,6 +13,7 @@ services:
     environment:
       - SPRING_PROFILES_ACTIVE=production
     command: java -jar /opt/assets/blog-0.0.1-SNAPSHOT.jar
+    # or even command: java -jar -Dspring.profiles.active=production demo-0.0.1-SNAPSHOT.jar
   db:
     image: postgres:11.1
     container_name: db
