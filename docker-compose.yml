@@ -10,6 +10,8 @@ services:
       - internal-net
     volumes:
       - ./backend/build/libs:/opt/assets/
+    environment:
+      - SPRING_PROFILES_ACTIVE=production
     command: java -jar /opt/assets/blog-0.0.1-SNAPSHOT.jar
   db:
     image: postgres:11.1
@@ -18,7 +20,7 @@ services:
     volumes:
       - ./backend/sql/schema.sql:/docker-entrypoint-initdb.d/schema.sql
     environment:
-      POSTGRES_PASSWORD: example
+      - POSTGRES_PASSWORD=example
     ports:
       - "5432:5432"
     networks:
