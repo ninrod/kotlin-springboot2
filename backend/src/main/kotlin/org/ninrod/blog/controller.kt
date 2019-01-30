@@ -19,7 +19,9 @@ class GreetingController(
     val counter = AtomicLong()
 
     @GetMapping("/")
-    fun greeting(@RequestParam(value = "name", defaultValue = "World") name: String): Greeting {
+    fun greeting(
+            @RequestParam(value = "name", defaultValue = "World") name: String
+    ): Greeting {
         log.info("$name was passed to the url. counter = $counter.")
         val phrase = service.phrase()
         return Greeting(counter.incrementAndGet(), "$phrase$name")
